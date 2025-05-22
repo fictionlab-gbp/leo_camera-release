@@ -2,29 +2,33 @@
 Changelog for package leo_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.2.0 (2025-05-05)
+0.3.0 (2025-05-22)
 ------------------
 * Update rosdep rules: use libcamera0.5
-* Import upstream changes (`#2 <https://github.com/fictionlab/leo_camera_ros/issues/2>`_)
-  * Added usage documentation for the camera_info_url parameter.
-  * skip parameter declaration when camera has no controls
-  * remove redundant explicit default construction
-  * exclude control 'AeLocked' for libcamera 0.5 and higher
-  * add missing control SensorTemperature
-  * add missing control HdrChannel
-  * add new AEGC-related controls from libcamera 0.5
-  * add missing control AeFlickerDetected
-  * add missing control Gamma
-  * add missing control DebugMetadataEnable
-  * add missing rpi control ScalerCrops
-  * add Raspberry Pi 5 specific control PispStatsOutput
-  * use new 'ExposureTimeMode' instead of 'AeEnable' when available
-  * release 0.4 for libcamera 0.5 support and fixes
-  * fetch "camera" parameter once directly from declaration and reuse
-  * new parameter for camera orientation in 90 degree steps
-  * remove trailig white space
-  * document new "orientation" parameter
-* Contributors: Błażej Sowa, Samyar Sadat Akhavi, Christian Rauch
+* Merge pull request `#124 <https://github.com/fictionlab/leo_camera_ros/issues/124>`_ from ahcorde/ahcorde/rolling/replace_ament_target_dependencies
+  Replace ament_target_dependencies with target_link_libraries
+* Replace ament_target_dependencies with target_link_libraries
+* Merge pull request `#121 <https://github.com/fictionlab/leo_camera_ros/issues/121>`_ from christianrauch/coredumps
+  add documentatin on how to generate core dumps
+* add documentatin on how to generate core dumps
+* Merge pull request `#116 <https://github.com/fictionlab/leo_camera_ros/issues/116>`_ from tschuette22/feat-frame_id-parameter
+  Add Camera frame_id Parameter to Node
+* feat: add parameter for frame_id of the camera
+* Merge pull request `#123 <https://github.com/fictionlab/leo_camera_ros/issues/123>`_ from christianrauch/fix_etm_default_manual
+  only restore 'ExposureTime' if it is not set
+* only restore 'ExposureTime' if it is not set and has been stored before
+* Merge pull request `#119 <https://github.com/fictionlab/leo_camera_ros/issues/119>`_ from christianrauch/update_dbg_doc
+  extend trouble shooting instructions
+* include instructions for installing debug symbols for binary bloom packages
+* automatically generate backtrace in gdb trouble shooting instructions
+* fix table column width
+* Merge pull request `#114 <https://github.com/fictionlab/leo_camera_ros/issues/114>`_ from christianrauch/orientation
+  orientation parameter
+* document new "orientation" parameter
+* remove trailig white space
+* new parameter for camera orientation in 90 degree steps
+* fetch "camera" parameter once directly from declaration and reuse
+* Contributors: Alejandro Hernandez Cordero, Błażej Sowa, Christian Rauch, Jan Hernas, Tjark
 
 0.1.0 (2025-04-03)
 ------------------
